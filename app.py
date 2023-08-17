@@ -1,18 +1,9 @@
 import streamlit as st
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 
-# # Load custom trained model and tokenizer
-# model = GPT2LMHeadModel.from_pretrained('https://huggingface.co/spaces/SoniR/chatbotllm/blob/main/config.json')
-# tokenizer = GPT2Tokenizer.from_pretrained('https://huggingface.co/spaces/SoniR/chatbotllm/blob/main/pytorch_model.bin')
-
-# Use a pipeline as a high-level helper
-from transformers import pipeline
-
-pipe = pipeline("text-generation", model="gpt2")# Load model directly
-from transformers import AutoTokenizer, AutoModelForCausalLM
-
-tokenizer = AutoTokenizer.from_pretrained("gpt2")
-model = AutoModelForCausalLM.from_pretrained("gpt2")
+# Load custom trained model and tokenizer
+model = GPT2LMHeadModel.from_pretrained('https://huggingface.co/spaces/SoniR/chatbotllm/blob/main/config.json')
+tokenizer = GPT2Tokenizer.from_pretrained('https://huggingface.co/spaces/SoniR/chatbotllm/blob/main/pytorch_model.bin')
 
 # Streamlit app title
 st.title("Custom Trained Chatbot")
