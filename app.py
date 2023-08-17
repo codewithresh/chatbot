@@ -1,5 +1,6 @@
 import streamlit as st
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
+import https://github.com/codewithresh/pytorch.git
 
 # Load custom trained model and tokenizer
 model = GPT2LMHeadModel.from_pretrained('https://huggingface.co/spaces/SoniR/chatbotllm/blob/main/config.json')
